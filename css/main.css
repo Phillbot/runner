@@ -1,0 +1,627 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  overflow: hidden;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+}
+
+.fst_bg {}
+
+.scnd_bg {
+  transform: scale(1.1);
+}
+
+.fb_ {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.gn_ {
+  width: 50%;
+  min-width: 200px;
+}
+
+.loader {
+  background: #000;
+  background: radial-gradient(#222, #000);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap {
+  animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px;
+}
+
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap:nth-child(1) {
+  animation-delay: -50ms;
+}
+
+.loader-line-wrap:nth-child(2) {
+  animation-delay: -100ms;
+}
+
+.loader-line-wrap:nth-child(3) {
+  animation-delay: -150ms;
+}
+
+.loader-line-wrap:nth-child(4) {
+  animation-delay: -200ms;
+}
+
+.loader-line-wrap:nth-child(5) {
+  animation-delay: -250ms;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: hsl(0, 80%, 60%);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: hsl(60, 80%, 60%);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: hsl(120, 80%, 60%);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: hsl(180, 80%, 60%);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: hsl(240, 80%, 60%);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+@keyframes spin {
+
+  0%,
+  15% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 75%;
+  max-height: 100%;
+  min-height: 620px;
+  min-width: 656.5px;
+  background-size: cover;
+  -webkit-box-shadow: 0px 6px 28px 12px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 6px 28px 12px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 6px 28px 12px rgba(0, 0, 0, 0.65);
+}
+
+.panel {
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.easy,
+.medium,
+.hard {
+  display: block;
+  padding: 3px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 6px;
+  border: 2px solid rgb(242, 242, 242);
+  color: rgb(242, 242, 242);
+  border-radius: 50px;
+  background: none;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.easy:hover,
+.medium:hover,
+.hard:hover {
+  cursor: pointer;
+
+  -webkit-animation: change 0.5s forwards;
+  -webkit-animation-timing-function: linear;
+  animation: change 0.5s forwards;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes change {
+  from {
+    background: none;
+  }
+
+  to {
+    background: rgb(152, 135, 135);
+  }
+}
+
+@keyframes change {
+  from {
+    background: none;
+  }
+
+  to {
+    background: rgb(152, 135, 135);
+  }
+}
+
+.hard:hover {
+  -webkit-animation: change_md 0.5s forwards;
+  -webkit-animation-timing-function: ease-in;
+  animation: change_md 0.5s forwards;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes change_md {
+  from {
+    -moz-transform: rotate(0deg);
+    /* Для Firefox */
+    -ms-transform: rotate(0deg);
+    /* Для IE */
+    -webkit-transform: rotate(0deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(0deg);
+    /* Для Opera */
+    transform: rotate(0deg);
+    background: none;
+  }
+
+  to {
+    -moz-transform: rotate(1deg);
+    /* Для Firefox */
+    -ms-transform: rotate(1deg);
+    /* Для IE */
+    -webkit-transform: rotate(1deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(1deg);
+    /* Для Opera */
+    transform: rotate(1deg);
+    background: rgb(152, 135, 135);
+  }
+}
+
+@keyframes change_md {
+  from {
+    -moz-transform: rotate(0deg);
+    /* Для Firefox */
+    -ms-transform: rotate(0deg);
+    /* Для IE */
+    -webkit-transform: rotate(0deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(0deg);
+    /* Для Opera */
+    transform: rotate(0deg);
+    background: none;
+  }
+
+  to {
+    -moz-transform: rotate(1deg);
+    /* Для Firefox */
+    -ms-transform: rotate(1deg);
+    /* Для IE */
+    -webkit-transform: rotate(1deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(1deg);
+    /* Для Opera */
+    transform: rotate(1deg);
+    background: rgb(172, 49, 49);
+  }
+}
+
+.hard_move {
+  -webkit-animation: hard_move 1.5s infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation: hard_move 1.5s infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  box-shadow: none;
+}
+
+@-webkit-keyframes hard_move {
+  from {
+    -moz-transform: rotate(-5deg);
+    /* Для Firefox */
+    -ms-transform: rotate(-5deg);
+    /* Для IE */
+    -webkit-transform: rotate(-5deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-5deg);
+    /* Для Opera */
+    transform: rotate(-5deg);
+  }
+
+  to {
+    -moz-transform: rotate(9deg);
+    /* Для Firefox */
+    -ms-transform: rotate(9deg);
+    /* Для IE */
+    -webkit-transform: rotate(9deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(9deg);
+    /* Для Opera */
+    transform: rotate(9deg);
+  }
+}
+
+@keyframes hard_move {
+  from {
+    -moz-transform: rotate(-5deg);
+    /* Для Firefox */
+    -ms-transform: rotate(-5deg);
+    /* Для IE */
+    -webkit-transform: rotate(-5deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(-5deg);
+    /* Для Opera */
+    transform: rotate(-5deg);
+  }
+
+  to {
+    -moz-transform: rotate(9deg);
+    /* Для Firefox */
+    -ms-transform: rotate(9deg);
+    /* Для IE */
+    -webkit-transform: rotate(9deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(9deg);
+    /* Для Opera */
+    transform: rotate(9deg);
+  }
+}
+
+.game_name {
+  text-align: center;
+  font-size: 54pt;
+  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 4px rgb(0, 0, 0);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.game_name :first-child {
+  font-size: 74pt;
+  -webkit-text-stroke: 4px rgb(0, 0, 0);
+  letter-spacing: 9px;
+  color: rgb(255, 255, 255);
+  font-style: italic;
+}
+
+#v {
+  font-size: 15pt;
+  -webkit-text-stroke: 1px;
+}
+
+p {
+  color: rgb(157, 46, 221);
+}
+
+.begun_logo {
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: 30%;
+  min-width: 200px;
+}
+
+.begun_logo:hover {
+  cursor: pointer;
+}
+
+#counter {
+  color: rgb(242, 242, 242);
+  -webkit-text-stroke: 0.3px black;
+  text-align: center;
+  display: block;
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+.game {
+  width: 70%;
+  height: 450px;
+  min-height: 60%;
+  margin: 0 auto;
+  margin-bottom: 8%;
+}
+
+.again {
+  display: none;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.reload {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgb(178, 242, 153);
+  color: rgb(132, 197, 107);
+  border-radius: 50px;
+  background: none;
+  font-size: 19pt;
+  font-weight: bold;
+  padding: 5px;
+  width: 200px;
+}
+
+.reload:hover {
+  cursor: pointer;
+  background: rgb(127, 165, 112);
+  color: black;
+}
+
+.click {
+  position: relative;
+  left: 40%;
+  top: 40%;
+  width: 18%;
+  height: 25%;
+  background: url(../img/begun.gif);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.do_ {
+  opacity: 0.1;
+  width: 11px;
+}
+
+.anime_easy {
+  -webkit-animation: mymove 2s infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation: mymove 2s infinite;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+.anime_medium {
+  -webkit-animation: mymove 1.3s infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation: mymove 1.3s infinite;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+.anime_hard {
+  -webkit-animation: mymove 0.8s infinite;
+  -webkit-animation-timing-function: ease-in;
+  animation: mymove 0.8s infinite;
+  animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes mymove {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 70%;
+  }
+}
+
+.click:hover {
+  cursor: crosshair;
+}
+
+#timerDiv {
+  margin: 0 auto;
+  text-align: center;
+  -webkit-text-stroke: 0.6px black;
+  color: white;
+  font-size: 22pt;
+  display: none;
+}
+
+#sec {
+  font-size: 32t;
+}
+
+.end {
+  margin-top: -8px;
+}
+
+.exit {
+  border-radius: 20px;
+  padding: 1px 20px;
+}
+
+.exit:hover {
+  cursor: pointer;
+}
+
+.warning {
+  -webkit-animation: danger 1s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation: danger 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes danger {
+  1% {
+    color: black;
+    font-size: 36pt;
+  }
+
+  100% {
+    color: red;
+    font-size: 42pt;
+  }
+}
+
+@keyframes danger {
+  1% {
+    color: black;
+    font-size: 36pt;
+  }
+
+  100% {
+    color: red;
+    font-size: 42pt;
+  }
+}
+
+.click:hover {
+  cursor: crosshair;
+}
+
+@media screen and (max-width: 800px) {
+  .game_name {
+    font-size: 34pt;
+  }
+
+  .game_name :first-child {
+    font-size: 44pt;
+  }
+
+  .container {
+    position: inherit;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background-size: cover;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .game {
+    min-height: 100%;
+    height: 350px;
+  }
+
+  .begun_logo {
+    width: 60%;
+    height: 60%;
+  }
+
+  .end {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hard_move {
+    -webkit-animation: hard_move 0s infinite;
+    -webkit-animation-timing-function: ease-in;
+    animation: hard_move 0s infinite;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    box-shadow: none;
+  }
+}
